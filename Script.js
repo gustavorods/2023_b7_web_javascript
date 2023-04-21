@@ -1,9 +1,4 @@
-let fruits = ["banana", "laranja", "maça", "pêra"];
+let elemento = document.getElementsByTagName("h1") //pode ser salvo em uma variável (caso seu uso seja feito diretamente pelo console, não precisa usar uma variável e console.log)
 
-if(fruits.includes('uva')) {
-    console.log("tem uva")
-}else {
-    console.log("não tem uva ")
-}
+console.log(elemento[1]) //aqui ele ta chamando o segundo h1, pq começa a contar a partir do 0
 
-/* includes vai te retornar se tal elemento existe dentro do array*/
