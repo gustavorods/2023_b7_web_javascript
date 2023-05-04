@@ -2,3 +2,6 @@ let elemento = document.getElementsByTagName("h1") //pode ser salvo em uma vari�
 
 console.log(elemento[1]) //aqui ele ta chamando o segundo h1, pq começa a contar a partir do 0
 
+function clicou() {
+    alert("Clicou no botão")
+}
