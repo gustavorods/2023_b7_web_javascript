@@ -5,5 +5,6 @@ function clicou() {
    let novoli = document.createElement("li"); //aqui ele cria um novo elemento <li>, mas pode ser h1, etc.
     novoli.innerText = "item adicionado";   //aquu ele "decide" que o novoli (nome da variavel) vai receber um valor de texto, por isso "text"
 
-    ul.appendChild(novoli) //aqui o appendChild adiciona o novoli
+    ul.prepend(novoli) //nesse caso, ele vai adicioanr esse novoli no topo da lista
+
 }
