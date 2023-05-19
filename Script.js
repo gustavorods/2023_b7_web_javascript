@@ -1,10 +1,16 @@
 function clicou() {
-    const teste = document.querySelector("#teste");
-    const ul = teste.querySelector('ul');
+    
+    const input = document.querySelector('input');
+    const botao = document.querySelector('.botao')
 
-   let novoli = document.createElement("li"); //aqui ele cria um novo elemento <li>, mas pode ser h1, etc.
-    novoli.innerText = "item adicionado";   //aquu ele "decide" que o novoli (nome da variavel) vai receber um valor de texto, por isso "text"
-
-    ul.prepend(novoli) //nesse caso, ele vai adicioanr esse novoli no topo da lista
-
+    if(input.getAttribute('type') === 'text') {
+        input.setAttribute('type', 'password');
+        botao.innerText = "Mostrar Senha";
+    }else {
+        input.setAttribute('type', 'text');
+        botao.innerText = "Ocultar senha";
+    }
 }
+
+/*Se o type do input for text, transforme em senhra e muda o texto do botao para "mostrar senha" 
+Caso a type não seja text(se não é text é passowrd), transforme em text e muda o texto do botão*/
