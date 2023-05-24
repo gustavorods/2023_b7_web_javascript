@@ -1,16 +1,8 @@
 function clicou() {
-    
-    const input = document.querySelector('input');
-    const botao = document.querySelector('.botao')
+    const botao = document.querySelector('button');
 
-    if(input.getAttribute('type') === 'text') {
-        input.setAttribute('type', 'password');
-        botao.innerText = "Mostrar Senha";
-    }else {
-        input.setAttribute('type', 'text');
-        botao.innerText = "Ocultar senha";
-    }
+    botao.classList.add('verde') //adicionar a class
+    botao.classList.remove('azul') //remover a class
+
+    console.log(botao.classList); //mostra a lista de class
 }
-
-/*Se o type do input for text, transforme em senhra e muda o texto do botao para "mostrar senha" 
-Caso a type não seja text(se não é text é passowrd), transforme em text e muda o texto do botão*/
