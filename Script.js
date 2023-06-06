@@ -1,11 +1,13 @@
-function clicou() {
-    const botao = document.querySelector('button');
+adicionar = function () {
+    const ul = document.querySelector("ul");
+    const input = document.querySelector("input");
+    
+    let novoItem = document.createElement("li");
+    novoli.innerText = input;
 
-    if(botao.classList.contains('azul')) {
-        botao.classList.replace('azul', 'verde')
-    }else {
-        botao.classList.replace('verde', 'azul')
-    }
+    ul.appendChild(novoli)
 
-    console.log(botao.classList); //mostra a lista de class
 }
+
+const input = document.querySelector("input");
+input.addEventListener("keyup", adicionar);
