@@ -18,4 +18,14 @@ let p3 = new Person("Pedro");
 
 console.log(p1.age); 
 console.log(p2.age); 
-console.log(p3.age); 
+console.log(p3.age);
+
+/*todos vão ter 0 anos, mas vc pode adicionar, você pode colocar a idade com: 
+
+exemplo: p1.age = 30 
+
+obs:age é uma propriedade que exxites, mas não foi preenchida no construtor, porém existe
+
+
+*/
+
