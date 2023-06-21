@@ -1,13 +1,12 @@
-adicionar = function () {
-    const ul = document.querySelector("ul");
-    const input = document.querySelector("input");
-    
-    let novoItem = document.createElement("li");
-    novoli.innerText = input;
+//esta sendo criado o template agr
 
-    ul.appendChild(novoli)
-
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 }
 
-const input = document.querySelector("input");
-input.addEventListener("keyup", adicionar);
+
+//constructor é uma função que vai ser executada sempre que a gente cria uma pessoa nova 
+//this se referece ao proprio objeto (por exemplo: o nome "joao", quando o this estiver se refeindo ao objeto de joao, vai ser o objeto de joao (dele))
