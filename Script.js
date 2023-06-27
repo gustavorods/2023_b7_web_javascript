@@ -14,6 +14,13 @@
     //ações
     takeAstep() {
         this.steps++;
+    }    
+
+    setAge(newAge) {
+        if(typeof newAge == "number") {
+        this.age = newAge;
+
+        }
     }
 
 }
@@ -26,6 +33,6 @@ let p3 = new Person("Pedro");
 
 p1.takeAstep();
 p1.takeAstep();
+p1.setAge(10);
 
-console.log(`Passos de ${p1.name}: ${p1.steps}`)
-console.log(`Passos de ${p2.name}: ${p2.steps}`)
+console.log(`Passos de ${p1.name}: ${p1.steps} e tem ${p1.age}`)
