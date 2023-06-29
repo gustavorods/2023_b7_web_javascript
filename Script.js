@@ -1,47 +1,35 @@
-    class Person {
+class Person {
 
-    _age = 0; 
-    steps = 0;
+    age = 0;
+
+    constructor(name) {
+        this.name = name;
 
 
-    
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
-
-    takeAstep() {
-        this.steps++;
-    }    
-
-
-
-    get age() {
-        return this._age; //é necessário renomear o age, por isso o "_age" (os nomes tem que ser diferente )
-    } //vai retornar o valor que eu quero 
-
-    get fullname() {
-        return `${this.firstName} ${this.lastName}`;
-    }
-
-    set age(x) {
-        if(typeof x == "number") {
-            this._age = x; //x armazena temporiariamente 
-        }
-    }
+    sayHi() {
+        console.log(`${this.name} diz OI `)
+    } 
 
 }
 
 
+class Student extends Person {
 
-let p1 = new Person("Gustavo", "Silva");
-let p2 = new Person("Maria");
-let p3 = new Person("Pedro");
+    
+    constructor(name, id) {
+        super(name);
+        this.id = id;
+    }
+
+    sayHello() {
+        super.sayHi();
+        console.log("tudo bem?"); 
+    }
+}
 
 
-p1.age = 10;
-p2.age = 1
+let p1 = new Student("Pedro", 11123)
 
-console.log(`${p1.fullname} tem ${p1.age} anos`)
-console.log(`${p2.fullname} tem ${p2.age} anos`)
+p1.sayHello(); 
