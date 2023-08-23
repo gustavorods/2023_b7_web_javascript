@@ -1,19 +1,22 @@
-const defaultUser = {
-    name: "", 
-    email: "", 
-    level: 1, 
+function clicou() 
+{
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => {
+            return response.json();     
+        })
+        .then((data) => {
+            alert(`O título do primeiro post é: ${data[0].title}`);
+        })
+        .catch((erro) => {
+            alert("Algo deu errado durante a requisição, abra o console para verificar"); // Alerta que aparecera pro usuário
+            console.log(`O erro foi o seguinte: ${erro}`);
+        })
+        .finally(() => {
+            alert("Deu tudo certo ou tudo errado? risos.")
+        })
+        
+        
 
 }
 
-let user1 = {
-    ...defaultUser, //herdando as especificações de "defaultUSer"
-    name: "Gustavo", //depois de herdar uma outra função, você pode adicionar mais coisa ou substituir as coisas, como no caso do "name".
-    email: "undefield@bla...",
-}
-
-let adm1 = {
-    ...defaultUser,
-    name: "Gustavo adm",
-    email: "ADM@bla...",
-    level: 2,
-}
+document.querySelector('#botao').addEventListener('click', clicou);
