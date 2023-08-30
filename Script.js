@@ -1,4 +1,4 @@
-// TEMP: antes do nome da função que retorna uma promise (await) 09:28
+// TEMP: await vem antes do nome da função que retorna uma promise (await) | corte bonieky sobre: 09:28
 
 async function clicou() {
     try {
@@ -35,6 +35,7 @@ async function Inserir() {
     let convert = await req.json();
 
     console.log(`O título do post é: ${convert.title}`);
+    console.log(`oi`);
 }
 
 document.querySelector('#botao').addEventListener('click', clicou);
