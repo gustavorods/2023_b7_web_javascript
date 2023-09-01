@@ -1,4 +1,6 @@
 // TEMP: await vem antes do nome da função que retorna uma promise (await) | corte bonieky sobre: 09:28
+// TEMP: Não esequecer de anotar no notion sobre o Status 0 (dominio não encontrada)
+// TEMP: por que "/post" o método não é GET?
 
 async function clicou() {
     try {
@@ -6,15 +8,17 @@ async function clicou() {
         if (!req.ok) {
             throw new Error(`Erro na requisição: ${req.status}`);
         }
-
-        let convert = await req.json(); // Vai esperar a conversão | usar await aqui não é estritamente necessário, mas é uma boa prática ;)
+        
+        let convert = await req.json(); // Vai esperar a conversão 
 
         alert(`O título do primeiro post é: ${convert[0].title}`);
         alert("OPAA");
-    } catch (erro) {
-        console.log(`Ocorreu um erro: ${erro}`);
+    } 
+    catch (error) {
+        console.error("Ocorreu um erro:", error);
     }
 }
+
 
 async function Inserir() {
     let req = await fetch(
