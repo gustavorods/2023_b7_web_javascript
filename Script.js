@@ -3,7 +3,7 @@
 
 async function clicou() {
     try {
-        let req = await fetch('https://jsonplacehsolder.typicode.com/posts'); // Vai esperar a requisição | await vem antes do nome da função que retorna uma promise.
+        let req = await fetch('https://jsonplaceholder.typicode.com/posts'); // Vai esperar a requisição 
         if (!req.ok) { // Vende se a requisição deu errado 
             throw new Error(`Erro na requisição: ${req.status}`);
         }
