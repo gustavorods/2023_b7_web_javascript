@@ -1,15 +1,16 @@
-// TEMP: await vem antes do nome da função que retorna uma promise (await) | corte bonieky sobre: 09:28
-// TEMP: Não esequecer de anotar no notion sobre o Status 0 (dominio não encontrada)
 // TEMP: por que "/post" o método não é GET?
+// TEMP: get puxando id
 
 async function clicou() {
     try {
-        let req = await fetch('https://jsonplaceholder.typicode.com/posts'); // Vai esperar a requisição 
-        if (!req.ok) {
+        let req = await fetch('https://jsonplacehsolder.typicode.com/posts'); // Vai esperar a requisição | await vem antes do nome da função que retorna uma promise.
+        if (!req.ok) { // Vende se a requisição deu errado 
             throw new Error(`Erro na requisição: ${req.status}`);
         }
         
-        let convert = await req.json(); // Vai esperar a conversão 
+        let convert = await req.json(); /* Usar "await" aqui é recomendado em contexto assíncrono. Sem ele, a função continua antes da conclusão da chamada, 
+        causando resultados imprevisíveis, pois "req.json()" é uma promessa. Com "await", o código espera pela resolução da promessa, garantindo que "convert" 
+        seja definido corretamente antes de prosseguir, vital em ambientes assíncronos. */
 
         alert(`O título do primeiro post é: ${convert[0].title}`);
         alert("OPAA");
