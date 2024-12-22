@@ -1,5 +1,19 @@
-function adicionar(...numeros) {
-    console.log(numeros);
-}
+// includes Array 
+let lista = ['ovo', 'café', 'bolo', 'arroz'];
 
-adicionar(1,2,4,); // (3) [1, 2, 4]
+console.log(lista.includes('ovo')) // true 
+console.log(lista.includes('Mouse')) // false
+
+/* 
+indexOf x includes
+
+indexOf = retorna a posição do item 
+includes = retorna true ou false 
+
+OBS: ambos são case-sensitive
+*/
+
+
+let nome = 'Gustavo';
+console.log(nome.includes('w')) // false
+console.log(nome.includes('s')) // true
