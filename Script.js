@@ -13,7 +13,7 @@ includes = retorna true ou false
 OBS: ambos são case-sensitive
 */
 
-
+// includes String
 let nome = 'Gustavo';
 console.log(nome.includes('w')) // false
 console.log(nome.includes('s')) // true
