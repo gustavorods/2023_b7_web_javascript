@@ -1,20 +1,16 @@
-// Objeto: Key, Values e Entries - Obejtos
-let pessoa = {
-    nome:'Gustavo',
-    sobrenome:'Rodrigues',
-    idade:17
-};
+// Objeto: Key, Values e Entries - Array
+let lista = ['ovo', 'maçã', 'café'];
 
 // Key (vai retornar os indices)
-console.log(Object.keys(pessoa)); // (3) ['nome', 'sobrenome', 'idade']
+console.log(Object.keys(lista)); // (3) ['0', '1', '2']
 
 // Values (vai retornar os valores )
-console.log(Object.values(pessoa)); // (3) ['Gustavo', 'Rodrigues', 17]
+console.log(Object.values(lista)); // (3) ['ovo', 'maçã', 'café']
 
 // Entries (vai retornar o indice e o valor)
-console.log(Object.entries(pessoa)); 
+console.log(Object.entries(lista)); 
 /*
-0: (2) ['nome', 'Gustavo']
-1: (2) ['sobrenome', 'Rodrigues']
-2: (2) ['idade', 17]
+0: (2) ['0', 'ovo']
+1: (2) ['1', 'maçã']
+2: (2) ['2', 'café']
 */
