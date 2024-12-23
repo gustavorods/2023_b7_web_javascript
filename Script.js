@@ -1,9 +1,7 @@
-// padEnd (preenche pra direita)
-let numero = "1";
-numero = numero.padEnd(10, "*");
-console.log(`${numero}`); // 1*********
+let cartao = '1234123412341234';
 
-// padStart (preenche pra esquerda)
-let numero2 = "2";
-numero2 = numero2.padStart(10, "*");
-console.log(`${numero2}`); // *********2
+let lastDigits = cartao.slice(-4);
+
+let cartaoMascarado = lastDigits.padStart(16, "*");
+
+console.log("Este é o seu cartão: " + cartaoMascarado);
