@@ -1,5 +1,5 @@
-// Quando vc faz uma requisição e obtém uma resposta, ele vai vir no formato de JSON só que em string.
-// É necessário converter esse "JSON" para um JSON normal, ou seja, em formato de objeto
-let pessoa = JSON.parse('{"nome": "Gustavo", "idade": 90}');
-
-console.log(pessoa); // {nome: 'Gustavo', idade: 90}
+// Quando vc envia uma requisição, antes você tem que transformar seu objeto em um JSON String.
+// Praticamente o inverso do "JSON.parse()" 
+let pessoa = {nome:'gustavo', idade:17};
+let JSONString = JSON.stringify(pessoa);
+console.log(JSONString); // {"nome":"gustavo","idade":17}
