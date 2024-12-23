@@ -1,16 +1,9 @@
-// Objeto: Key, Values e Entries - Array
-let lista = ['ovo', 'maçã', 'café'];
+// padEnd (preenche pra direita)
+let numero = "1";
+numero = numero.padEnd(10, "*");
+console.log(`${numero}`); // 1*********
 
-// Key (vai retornar os indices)
-console.log(Object.keys(lista)); // (3) ['0', '1', '2']
-
-// Values (vai retornar os valores )
-console.log(Object.values(lista)); // (3) ['ovo', 'maçã', 'café']
-
-// Entries (vai retornar o indice e o valor)
-console.log(Object.entries(lista)); 
-/*
-0: (2) ['0', 'ovo']
-1: (2) ['1', 'maçã']
-2: (2) ['2', 'café']
-*/
+// padStart (preenche pra esquerda)
+let numero2 = "2";
+numero2 = numero2.padStart(10, "*");
+console.log(`${numero2}`); // *********2
