@@ -1,7 +1,5 @@
-let cartao = '1234123412341234';
+// Quando vc faz uma requisição e obtém uma resposta, ele vai vir no formato de JSON só que em string.
+// É necessário converter esse "JSON" para um JSON normal, ou seja, em formato de objeto
+let pessoa = JSON.parse('{"nome": "Gustavo", "idade": 90}');
 
-let lastDigits = cartao.slice(-4);
-
-let cartaoMascarado = lastDigits.padStart(16, "*");
-
-console.log("Este é o seu cartão: " + cartaoMascarado);
+console.log(pessoa); // {nome: 'Gustavo', idade: 90}
