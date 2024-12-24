@@ -1,5 +1,5 @@
-// Quando vc envia uma requisição, antes você tem que transformar seu objeto em um JSON String.
-// Praticamente o inverso do "JSON.parse()" 
-let pessoa = {nome:'gustavo', idade:17};
-let JSONString = JSON.stringify(pessoa);
-console.log(JSONString); // {"nome":"gustavo","idade":17}
+function alertar() {
+    console.log("Oi");
+}
+
+setTimeout(alertar, 2000); // espera 2s e dps chama a função, ou seja, a função é o callback
