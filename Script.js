@@ -1,17 +1,16 @@
-function loadPosts() {
+async function loadPosts() {
     document.getElementById("posts").innerHTML = "Carregando...";
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(function(resultado) {
-            // transformar em JSON
-            return resultado.json(); // retorna uma promises, ou seja, precisa de um "then"
-        })
-        .then(function(json) {
-            montarBlog(json);
-        })
-        .catch(function(error) {
-            console.error("Não foi possível fazer a requisição \n " + error);
-        })
+    // Fazendo requisição 
+    let req;
+    try {
+        req = await fetch('https://jsonplaceholder.typicode.com/posts');
+    } catch (error) {
+        console.log(`Erro ao fazer requisição \n ${error}`);
+    }
+
+    let json = await req.json();
+    montarBlog(json);
 }
 
 function montarBlog(lista) {
