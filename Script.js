@@ -1,26 +1,19 @@
-async function loadPosts() {
+async function inserirPost() {
     document.getElementById("posts").innerHTML = "Carregando...";
 
-    // Fazendo requisição 
-    let req;
-    try {
-        req = await fetch('https://jsonplaceholder.typicode.com/posts');
-    } catch (error) {
-        console.log(`Erro ao fazer requisição \n ${error}`);
-    }
-
+    let req = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({ // no body tem que enviar uma string com um objeto dentro 
+            title: "Titulo de teste",
+            body: "Corpo de teste",
+            userId: 4
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
     let json = await req.json();
-    montarBlog(json);
-}
-
-function montarBlog(lista) {
-    let html = '';
-
-    for(let i in lista) {
-        html += `<h3>${lista[i].title}</h3>`;
-        html += `${lista[i].body} <br/>`;
-        html += `<hr/>`;
-    }
-
-    document.getElementById("posts").innerHTML = html;
+    console.log(json);
+    
+    document.getElementById("posts").innerHTML = "Enviado!";
 }
