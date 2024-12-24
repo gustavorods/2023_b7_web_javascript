@@ -1,5 +1,34 @@
-function alertar() {
-    console.log("Oi");
+function pegarTemperatura() {
+    return new Promise(function(resolve, reject) {
+        console.log("Pegando temperatura...");
+
+        setTimeout(function() {
+            const sucesso = Math.random() > 0.5; // Simula um sucesso ou falha aleatório
+            if (sucesso) {
+                resolve('40 na sombra');
+            } else {
+                reject('Erro ao pegar a temperatura');
+            }
+        }, 2000);
+    });
 }
 
-setTimeout(alertar, 2000); // espera 2s e dps chama a função, ou seja, a função é o callback
+// USANDO A PROMISE
+console.log('Código antes!');
+
+let temp = pegarTemperatura();
+
+console.log("Código durante");
+
+temp.then(function(resultado) {
+    console.log("TEMPERATURA: " + resultado);
+}).catch(function(error) {
+    console.log("Eita, deu erro! Detalhes: " + error);
+});
+
+/*
+resolve: Passa o valor para o then.
+reject: Passa o valor para o catch.
+ */
+
+console.log("Código depois");
